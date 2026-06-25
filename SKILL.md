@@ -318,8 +318,14 @@ Her brief'te hangi yöntemle iç link keşfi yapıldığını Yazara Notlar böl
 - Description: 130-155 karakter
 - **Hem blog hem kategori brieflerinde** title ve description önerisi ZORUNLU
 - Mevcut sayfa varsa (blog veya kategori fark etmez): mevcut title/desc'i çek, önerilen ile karşılaştır
+- **Mevcut iyi ve performans veriyorsa DOKUNMA** — "Güncelle? Hayır — mevcut title/desc iyi performans veriyor" yaz
+- Performans kontrolü: Ahrefs'ten sayfanın mevcut organic keyword sıralamalarını ve trafiğini çek (`site-explorer-organic-keywords`). Eğer mevcut title/desc ile sayfa hedef keyword'lerde iyi sıralıyorsa veya trafik alıyorsa güncelleme önerme
+- Güncelleme SADECE şu durumlarda öner:
+  - Mevcut title/desc hedef keyword'ü hiç içermiyorsa
+  - Karakter limitleri aşılmış veya çok kısaysa (title <50 veya >60, desc <130 veya >155)
+  - Sayfa sıralama almıyorsa veya trafik düşükse
+  - İçerik ile title/desc uyumsuzsa
 - Güncelleme gerekli ise "Güncelle? Evet" + sebebini açıkla
-- Güncelleme gereksiz ise "Güncelle? Hayır" yaz
 - Yeni sayfa ise (mevcut yok): sadece önerilen title/desc yaz
 
 **Blog Title & Description — TRAFİK ODAKLI:**
