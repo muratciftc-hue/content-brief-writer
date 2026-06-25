@@ -132,12 +132,15 @@ Her blog brief'i aşağıdaki yapıda olmalı:
 │ Arama Hacmi  : [aylık arama hacmi - Ahrefs'ten]                 │
 │ KD           : [Keyword Difficulty - Ahrefs'ten]                │
 ├─────────────────────────────────────────────────────────────────┤
-│ Alt Başlıklar (Hx):                                              │
+│ Alt Başlıklar (Hx) — en az 4, en fazla 6:                        │
 │   H2 - [Alt başlık 1]                                            │
 │   H2 - [Alt başlık 2]                                            │
-│     H3 - [Alt alt başlık]                                        │
+│     H3 - [Alt alt başlık — sadece H2'nin altında anlamlıysa]    │
 │   H2 - [Alt başlık 3]                                            │
+│   H2 - [Alt başlık 4]                                            │
 │   ...                                                            │
+│   ⚠ Heading hiyerarşisi: H1→H2→H3 sırası ASLA atlanmamalı     │
+│   ⚠ H2 tercih edilir, H3 sadece bir H2'nin alt konusu varsa    │
 ├─────────────────────────────────────────────────────────────────┤
 │ Link Verilecek Kelimeler (Internal Links):                       │
 │   "[anchor text]" → [hedef URL]                                  │
@@ -182,10 +185,14 @@ Her kategori brief'i aşağıdaki yapıda olmalı:
 │   Ana: [ana keyword]                                             │
 │   Destekleyici: [kw1, kw2, kw3, ...]                            │
 ├─────────────────────────────────────────────────────────────────┤
-│ Alt Başlıklar (Hx):                                              │
+│ Alt Başlıklar (Hx) — en az 4, en fazla 6:                        │
 │   H2 - [Soru formatında, CTR artırıcı]                          │
 │   H2 - [Soru formatında, CTR artırıcı]                          │
 │   H2 - [Soru formatında, CTR artırıcı]                          │
+│   H2 - [Soru formatında, CTR artırıcı]                          │
+│   ...                                                            │
+│   ⚠ Heading hiyerarşisi: H1→H2→H3 sırası ASLA atlanmamalı     │
+│   ⚠ H2 tercih edilir, H3 sadece bir H2'nin alt konusu varsa    │
 ├─────────────────────────────────────────────────────────────────┤
 │ Link Verilecek Kelimeler (Internal Links):                       │
 │   "[anchor text]" → [hedef URL]                                  │
@@ -250,12 +257,35 @@ Her kategori brief'i aşağıdaki yapıda olmalı:
 - Ürün kategorisine uygun, alıcı niyetini yakalayan keywordler seç
 - Amaç: SERP'te rakiplerden daha yüksek tıklanma oranı elde etmek
 
+### Alt Başlık Kuralları (Her İki Mod İçin)
+- **En az 4, en fazla 6 alt başlık** — 3 veya daha az yetersiz, 7 veya fazla gereksiz
+- **H2 tercih edilir** — mümkün olduğunca H2 kullan
+- **H3 sadece** bir H2'nin alt konusunu açmak gerektiğinde kullanılır
+- **Heading hiyerarşisi ASLA atlanmamalı**: H1 → H2 → H3 sırası zorunlu. H1'den sonra direkt H3 kullanma, H2'den sonra direkt H4 kullanma
+- Blog modunda: bilgi verici, rehber niteliğinde alt başlıklar
+- Kategori modunda: soru formatında, CTR artırıcı alt başlıklar
+
+### Ürün Bazlı Analiz ve Öneriler (Kategori Briefleri İçin)
+- Hedef kategori sayfasını tara ve sayfadaki **ürünleri, markaları, fiyat aralığını** belirle
+- Ürün çeşitliliğine göre alt başlık ve içerik önerileri sun (örn: sayfada Babolat ve Dunlop varsa bu markalara değin)
+- Fiyat aralığını not et — description'da kullanılabilir
+- Ürün özelliklerini (kapasite, malzeme, teknoloji) alt başlıklara yansıt
+- Yazara Notlar bölümünde ürünlere özgü talimatlar ver
+
 ### İç Link Kuralları
 - Her brief'te en az 3, en fazla 6 iç link öner
 - İç linkler sitedeki gerçek sayfaları hedeflemeli
 - Anchor text doğal olmalı, keyword stuffing yapılmamalı
 - Her iç link içerikte sadece 1 kere kullanılmalı
 - İç linkler içeriğin farklı bölümlerine dağıtılmalı (yan yana değil)
+
+### İç Link Doğrulama (ZORUNLU)
+Önerilen her iç link için şu kontrolleri yap — doğrulanmamış link önerme:
+1. **URL var mı?** WebFetch ile hedef URL'yi çek. 404 veya redirect veriyorsa önerme
+2. **Trafik veriyor mu?** Ahrefs `site-explorer-organic-keywords` ile hedef sayfanın trafik alıp almadığını kontrol et
+3. **İlişkili mi?** Hedef sayfa brief konusuyla gerçekten alakalı mı? Alakasız sayfalara link verme
+4. **Alternatif var mı?** Aynı konuda birden fazla sayfa varsa (örn: /erkek/tenis-2/ ve /tenis-urunleri/) trafiği yüksek olanı tercih et
+5. Doğrulama sonucunu Yazara Notlar'da kısaca belirt: "İç linkler Ahrefs trafik verisiyle doğrulandı"
 
 ### İç Link Keşfi — Erişim Sorunları ve Çözümleri
 
