@@ -50,15 +50,20 @@ Kullanıcı başlık vermezse, brief oluşturma. Başlık iste.
 
 Kullanıcının girdisine göre modu belirle:
 
-### Blog Brief Modu
+### Blog Brief Modu — TRAFİK ODAKLI
 - Kullanıcı blog başlıklarını sağladığında
 - Informational intent ağırlıklı içerikler için
+- **Strateji: TRAFİK ODAKLI** — organik arama trafiği çekmeye yönelik
+- Title/description yüksek hacimli keyword'leri yakalayacak şekilde yazılır
+- Alt başlıklar bilgi verici, rehber niteliğinde olmalı
 - Tek tek veya toplu blog briefi üretir
 - **H1 kullanıcıdan gelir, aynen kullanılır**
 
-### Kategori Brief Modu
+### Kategori Brief Modu — CTR ODAKLI
 - Kullanıcı kategori URL'leri + H1 başlıklarını sağladığında
-- CTR odaklı (Click-Through Rate optimization)
+- **Strateji: CTR ODAKLI** — SERP'te tıklanma oranını artırmaya yönelik
+- Title/description kullanıcıyı tıklamaya ikna edecek şekilde yazılır
+- Alt başlıklar SORU formatında, alıcı niyetini yakalayan yapıda olmalı
 - E-ticaret kategori sayfaları için
 - 25 kategoriye kadar toplu brieflendirme destekler
 - **H1 kullanıcıdan gelir, aynen kullanılır**
@@ -231,11 +236,19 @@ Her kategori brief'i aşağıdaki yapıda olmalı:
 
 ## Kritik Kurallar
 
+### Trafik Odaklı Yaklaşım (Blog Briefleri İçin)
+- Alt başlıklar bilgi verici ve rehber niteliğinde olmalı
+- Mümkün olduğunca geniş arama sorgusunu kapsayacak keyword seçimi
+- Informational intent: "Nedir?", "Nasıl Yapılır?", "Rehber", "Adım Adım" kalıpları
+- Title'da yüksek hacimli keyword öne, description'da arama sorusuna yanıt vaadi
+- Amaç: organik aramadan maksimum trafik çekmek
+
 ### CTR Odaklı Yaklaşım (Kategori Briefleri İçin)
 - Alt başlıklar SORU formatında olmalı ("... Nelere Dikkat Edilmeli?", "... Nasıl Seçilir?")
-- Title'da kullanıcıyı tıklamaya teşvik eden ifadeler kullan
+- Title'da kullanıcıyı tıklamaya teşvik eden ifadeler kullan (ürün sayısı, marka, fiyat)
 - Description'da somut bilgi + CTA olmalı
 - Ürün kategorisine uygun, alıcı niyetini yakalayan keywordler seç
+- Amaç: SERP'te rakiplerden daha yüksek tıklanma oranı elde etmek
 
 ### İç Link Kuralları
 - Her brief'te en az 3, en fazla 6 iç link öner
@@ -298,7 +311,9 @@ Her brief'te hangi yöntemle iç link keşfi yapıldığını Yazara Notlar böl
 - "İç linkler site: araması ile bulundu"
 - "İç linkler tarayıcı üzerinden tarandı"
 
-### Title & Description Kuralları
+### Title & Description Kuralları (Her İki Mod İçin ZORUNLU)
+
+**Genel kurallar:**
 - Title: 50-60 karakter (asla 50'nin altında, 60'ın üstünde olmasın)
 - Description: 130-155 karakter
 - **Hem blog hem kategori brieflerinde** title ve description önerisi ZORUNLU
@@ -306,6 +321,22 @@ Her brief'te hangi yöntemle iç link keşfi yapıldığını Yazara Notlar böl
 - Güncelleme gerekli ise "Güncelle? Evet" + sebebini açıkla
 - Güncelleme gereksiz ise "Güncelle? Hayır" yaz
 - Yeni sayfa ise (mevcut yok): sadece önerilen title/desc yaz
+
+**Blog Title & Description — TRAFİK ODAKLI:**
+- Title'da yüksek hacimli ana keyword'ü mümkün olduğunca öne al
+- Arama hacmi yüksek varyasyonları ve long-tail keyword'leri title'a dahil et
+- Description'da kullanıcının aradığı soruya doğrudan cevap vaat et
+- "Rehber", "Adım Adım", "Nasıl Yapılır" gibi trafik çeken kalıplar kullan
+- Amaç: mümkün olan en geniş arama sorgusunu yakalamak
+- Örnek: "Ekran Görüntüsü Nasıl Alınır? iPhone, Android ve PC Rehberi"
+
+**Kategori Title & Description — CTR ODAKLI:**
+- Title'da kullanıcıyı tıklamaya ikna edecek değer önerisi sun
+- Ürün çeşitliliği, fiyat avantajı, marka bilgisi gibi tıklama tetikleyicileri ekle
+- Description'da somut bilgi ver: ürün sayısı, marka, özellik, fiyat aralığı
+- "Modelleri", "Fiyatları", "Çeşitleri" gibi ticari niyet tetikleyicileri kullan
+- Amaç: SERP'te rakiplerin arasından sıyrılıp tıklanmak
+- Örnek: "Erkek Boxer Modelleri ve Fiyatları | 52 Ürün | SPX"
 
 ### Keyword Araştırma Kuralları
 - Ana keyword + en az 5 destekleyici keyword belirle
