@@ -140,7 +140,14 @@ Her blog brief'i aşağıdaki yapıda olmalı:
 │   ...                                                            │
 ├─────────────────────────────────────────────────────────────────┤
 │ Title Tag    : [50-60 karakter, keyword önde]                    │
+│   Mevcut     : [mevcut title - eğer sayfa varsa]                │
+│   Önerilen   : [yeni title önerisi]                              │
+│   Güncelle?  : [Evet/Hayır + sebep]                              │
+│                                                                  │
 │ Description  : [130-155 karakter, CTA ile biten]                │
+│   Mevcut     : [mevcut description - eğer sayfa varsa]          │
+│   Önerilen   : [yeni description önerisi]                        │
+│   Güncelle?  : [Evet/Hayır + sebep]                              │
 ├─────────────────────────────────────────────────────────────────┤
 │ Yazara Notlar:                                                   │
 │   - Hedef kelime sayısı: [X-Y kelime]                           │
@@ -215,7 +222,7 @@ Her kategori brief'i aşağıdaki yapıda olmalı:
 - Sütunlar brief moduna göre ayarlanır
 
 #### Blog Brief xlsx Sütunları:
-| URL | H1 (kullanıcıdan) | Keyword | Alt Başlık - Hx | Link Verilecek Kelimeler | Title | Desc | Notlar |
+| URL | H1 (kullanıcıdan) | Keyword | Alt Başlık - Hx | Link Verilecek Kelimeler | Mevcut Title | Önerilen Title | Güncelle? | Mevcut Desc | Önerilen Desc | Güncelle? | Notlar |
 
 #### Kategori Brief xlsx Sütunları:
 | URL | H1 (kullanıcıdan) | Ürün Sayısı | Arama Hacmi | Keyword | Alt Başlık | Link Verilecek Kelimeler | Mevcut Title | Önerilen Title | Güncelle? | Mevcut Desc | Önerilen Desc | Güncelle? | Notlar |
@@ -294,8 +301,11 @@ Her brief'te hangi yöntemle iç link keşfi yapıldığını Yazara Notlar böl
 ### Title & Description Kuralları
 - Title: 50-60 karakter (asla 50'nin altında, 60'ın üstünde olmasın)
 - Description: 130-155 karakter
-- Kategori brieflerinde mevcut title/desc varsa karşılaştır ve sadece gerekli ise güncelleme öner
-- Güncelleme önerirken sebebini açıkla
+- **Hem blog hem kategori brieflerinde** title ve description önerisi ZORUNLU
+- Mevcut sayfa varsa (blog veya kategori fark etmez): mevcut title/desc'i çek, önerilen ile karşılaştır
+- Güncelleme gerekli ise "Güncelle? Evet" + sebebini açıkla
+- Güncelleme gereksiz ise "Güncelle? Hayır" yaz
+- Yeni sayfa ise (mevcut yok): sadece önerilen title/desc yaz
 
 ### Keyword Araştırma Kuralları
 - Ana keyword + en az 5 destekleyici keyword belirle
