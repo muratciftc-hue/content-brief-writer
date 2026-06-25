@@ -237,6 +237,60 @@ Her kategori brief'i aşağıdaki yapıda olmalı:
 - Her iç link içerikte sadece 1 kere kullanılmalı
 - İç linkler içeriğin farklı bölümlerine dağıtılmalı (yan yana değil)
 
+### İç Link Keşfi — Erişim Sorunları ve Çözümleri
+
+Bazı siteler JS rendering, bot koruması (Cloudflare, Akamai, PerimeterX vb.) veya rate limiting nedeniyle doğrudan taranamayabilir. Bu durumda aşağıdaki fallback zincirini SIRAyla uygula — ilk çalışan yöntemle devam et:
+
+#### Seviye 1: Doğrudan Tarama (WebFetch)
+- Hedef sayfayı ve ilişkili sayfaları WebFetch ile çek
+- Çalışırsa: HTML'den iç linkleri, anchor text'leri ve URL yapısını çıkar
+- **Başarısız olma belirtileri**: 403/503 hatası, boş body, Cloudflare challenge sayfası, CAPTCHA, "Please enable JavaScript" mesajı
+
+#### Seviye 2: Sitemap Taraması
+WebFetch başarısız olursa:
+1. `domain.com/sitemap.xml` adresini çek
+2. Sitemap yoksa `domain.com/sitemap_index.xml` dene
+3. O da yoksa `domain.com/robots.txt` dosyasından `Sitemap:` satırını oku
+4. Sitemap'ten tüm URL'leri çıkar
+5. URL yapısından kategori/alt-kategori ilişkilerini belirle (örn: `/erkek/boxer/` → `/erkek/` üst kategorisi)
+6. İlişkili URL'leri iç link önerisi olarak kullan
+
+#### Seviye 3: Ahrefs Site Explorer
+Sitemap de erişilemezse:
+1. **`site-explorer-linked-anchors-internal`**: Sitenin kendi iç link yapısını ve anchor text'lerini çek
+2. **`site-explorer-pages-by-internal-links`**: En çok iç link alan sayfaları bul
+3. **`site-explorer-top-pages`**: Trafiğe göre en önemli sayfaları listele
+4. **`site-explorer-crawled-pages`**: Ahrefs'in crawl ettiği sayfa listesinden URL yapısını çıkar
+5. Bu verilerden ilişkili sayfaları ve doğal anchor text önerilerini türet
+
+#### Seviye 4: Google site: Araması
+Ahrefs verisi de yetersizse:
+1. **WebSearch** ile `site:domain.com keyword` sorgusu yap
+2. Sonuçlardan ilişkili sayfa URL'lerini ve Google'ın gösterdiği title/description'ları topla
+3. Farklı keyword varyasyonlarıyla birden fazla `site:` sorgusu yap
+4. Bulunan URL'leri iç link önerisi olarak kullan
+
+#### Seviye 5: Chrome MCP ile Tarayıcı Üzerinden Tarama
+Tüm otomatik yöntemler başarısız olursa ve Chrome MCP bağlıysa:
+1. **`navigate`** ile hedef sayfayı aç (JS render edilir, bot koruması geçilir)
+2. **`read_page`** ile sayfa yapısını oku (tüm linkler dahil)
+3. **`find`** ile "navigation", "menu", "sidebar", "footer links" gibi bölümleri tara
+4. **`get_page_text`** ile sayfa içeriğini çek
+5. Bulunan iç linkleri ve anchor text'leri kaydet
+
+#### Seviye 6: Kullanıcıya Sor
+Hiçbir yöntem çalışmazsa:
+1. Durumu açıkça raporla: hangi yöntemler denendi, neden başarısız oldu
+2. Kullanıcıdan sitemap URL'si, sayfa listesi veya xlsx ile iç link hedefleri iste
+3. Kullanıcı veri sağladığında onunla devam et
+
+#### Raporlama
+Her brief'te hangi yöntemle iç link keşfi yapıldığını Yazara Notlar bölümünde kısaca belirt:
+- "İç linkler sitemap.xml'den türetildi" 
+- "İç linkler Ahrefs crawl verisinden alındı"
+- "İç linkler site: araması ile bulundu"
+- "İç linkler tarayıcı üzerinden tarandı"
+
 ### Title & Description Kuralları
 - Title: 50-60 karakter (asla 50'nin altında, 60'ın üstünde olmasın)
 - Description: 130-155 karakter
